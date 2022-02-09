@@ -3,13 +3,14 @@ import * as C from './App.styles';
 import * as Photos from './services/photos';
 import { Photo } from './types/Photo';
 import { PhotoItem } from './components/PhotoItem';
+import { Loading } from './components/Loading';
+
 
 const App = () => {
 
   const [uploading, setUploading] = useState(false);
   const [loading, setLoading] = useState(false);
   const [photos, setPhotos] = useState<Photo[]>([]);
-
 
   useEffect(()=>{
     getPhotos();
@@ -59,8 +60,7 @@ const App = () => {
 
         {loading &&
           <C.ScreenWarning>
-            <div className='emoji'>🔋</div>
-            <div>Carregando...</div>
+            <Loading/>
           </C.ScreenWarning>
         }
 
