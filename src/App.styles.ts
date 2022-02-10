@@ -13,10 +13,13 @@ export const Area = styled.div`
 `;
 
 export const Header = styled.h1`
+  @import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap');
   margin: 0;
   padding: 0;
   text-align: center;
   margin-bottom: 30px;
+  font-family:'Balsamiq Sans', cursive;
+  font-size: 44px;
 `;
 
 export const ScreenWarning = styled.div`
